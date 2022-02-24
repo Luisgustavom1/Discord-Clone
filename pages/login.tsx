@@ -11,6 +11,7 @@ import Button from "src/components/UI/Button";
 import logoAndText from "public/assets/svg/logo-and-text.svg";
 import Card from "src/components/UI/Card";
 import { InputForm } from "src/components/ReactHookForm/InputForm";
+import { LinkTypograph } from "src/components/UI/Typography";
 
 const Login: NextPage = () => {
   type values = "identification" | "password";
@@ -56,11 +57,9 @@ const Login: NextPage = () => {
               <Button type="submit" className="mb-8">
                 Entrar
               </Button>
-              <p className="text-sm text-gray-400 font-medium flex">
+              <p className="text-sm text-gray-400 font-medium flex gap-4">
                 Precisando de uma conta?{" "}
-                <strong className="text-blue ml-4 cursor-pointer hover:underline">
-                  <Link href="/register">Registra-se</Link>
-                </strong>
+                <LinkTypograph href="/register">Registra-se</LinkTypograph>
               </p>
             </div>
           </FormContext>
