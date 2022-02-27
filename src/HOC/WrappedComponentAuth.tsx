@@ -7,8 +7,8 @@ function areInBrowser() {
   return typeof window !== "undefined";
 }
 
-const WrappedComponent = <T extends React.ComponentType>(
-  Component: React.ComponentType
+const WrappedComponent = <T extends React.FunctionComponent>(
+  Component: React.FunctionComponent
 ) => {
   const AuthComponent = ({ ...props }: React.ComponentProps<T>) => {
     const { auth } = useAuth();
