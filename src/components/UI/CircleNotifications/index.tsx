@@ -6,8 +6,8 @@ export default function CircleNotifications({
   numberNotifications,
 }: ICircleNotificationProps) {
   return (
-    <span className="block w-16 h-16 rounded-full text-center text-xs font-medium text-white bg-red">
-      {numberNotifications}
+    <span className="block py-0 px-[4.5px] rounded-full text-center text-xs font-semibold text-white bg-red">
+      {numberNotifications > 99 ? "99+" : numberNotifications}
     </span>
   );
 }

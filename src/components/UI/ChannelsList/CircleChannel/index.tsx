@@ -4,8 +4,8 @@ import CircleNotifications from "src/components/UI/CircleNotifications";
 
 interface ICircleChannelProps {
   active?: boolean;
-  notification?: boolean;
-  imgUrl?: string;
+  notification: number;
+  imgUrl: string;
 }
 
 export default function CircleChannel({
@@ -14,7 +14,7 @@ export default function CircleChannel({
   notification,
 }: ICircleChannelProps) {
   return (
-    <ul className="w-full h-48">
+    <ul className="w-full h-48 flex-none">
       <div
         className={clsx({
           "w-48 h-full mx-auto relative rounded-full flex items-center justify-center duration-100 ease-out before:block before:duration-75 before:ease-out before:delay-75 before:-left-12 before:top-1/2 before:-translate-y-1/2 before:absolute before:rounded-r-md before:bg-white hover:rounded-2xl":
@@ -25,7 +25,7 @@ export default function CircleChannel({
           "before:h-8 before:w-4": notification,
           "rounded-2xl before:h-40 before:w-4": active,
           "hover:before:w-4 hover:before:h-[18px]": !active,
-          [`bg-[url(${imgUrl || "."})] bg-contain`]: imgUrl,
+          [`bg-[url('${imgUrl || "."}')] bg-contain`]: imgUrl,
         })}
       >
         <svg
@@ -41,9 +41,11 @@ export default function CircleChannel({
           />
         </svg>
         <div className="absolute -bottom-4 -right-4">
-          <div className="bg-black-800 p-4 rounded-full">
-            <CircleNotifications numberNotifications={6} />
-          </div>
+          {notification > 0 && (
+            <div className="bg-black-800 p-4 rounded-full">
+              <CircleNotifications numberNotifications={notification} />
+            </div>
+          )}
         </div>
       </div>
     </ul>
