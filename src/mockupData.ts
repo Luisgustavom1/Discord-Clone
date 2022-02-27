@@ -91,6 +91,48 @@ const mockupData = {
       slugChannel: "channel13",
       notification: 100,
     },
+    {
+      id: 14,
+      name: "Channel 14",
+      imgUrl: "../../public/assets/svg/bg-login.svg",
+      slugChannel: "channel14",
+      notification: 100,
+    },
+    {
+      id: 15,
+      name: "Channel 15",
+      imgUrl: "../../public/assets/svg/bg-login.svg",
+      slugChannel: "channel15",
+      notification: 100,
+    },
+    {
+      id: 16,
+      name: "Channel 16",
+      imgUrl: "../../public/assets/svg/bg-login.svg",
+      slugChannel: "channel16",
+      notification: 100,
+    },
+    {
+      id: 21,
+      name: "Channel 21",
+      imgUrl: "../../public/assets/svg/bg-login.svg",
+      slugChannel: "channel21",
+      notification: 100,
+    },
+    {
+      id: 17,
+      name: "Channel 17",
+      imgUrl: "../../public/assets/svg/bg-login.svg",
+      slugChannel: "channel17",
+      notification: 100,
+    },
+    {
+      id: 18,
+      name: "Channel 18",
+      imgUrl: "../../public/assets/svg/bg-login.svg",
+      slugChannel: "channel18",
+      notification: 100,
+    },
   ],
 };
 export default mockupData;
