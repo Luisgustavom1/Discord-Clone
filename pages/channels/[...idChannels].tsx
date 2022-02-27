@@ -1,10 +1,10 @@
 import WrappedComponent from "src/HOC/WrappedComponentAuth";
+import Authenticated from "src/layouts/Authenticated";
 
-const Channels = (): JSX.Element => {
+const Channels = () => {
   return (
     <div>
-      <h1>OOOIIII</h1>
-      <p>Tamo no canal</p>
+      <Authenticated />
     </div>
   );
 };
