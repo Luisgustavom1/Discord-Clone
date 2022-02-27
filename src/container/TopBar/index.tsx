@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import clsx from "clsx";
 
-import "./styles.css";
+import styles from "./styles.module.css";
 
 interface ItopBarProps {
   children: ReactNode;
@@ -32,7 +32,7 @@ export default function TopBar({
     <div
       {...rest}
       className={clsx({
-        "topBar-container-box-shadow z-10 relative flex items-center h-48 px-8":
+        [`${styles["topBar-container-box-shadow"]} z-10 relative flex items-center h-48 px-8`]:
           true,
         [possibleBackgrounds[optionBg]]: optionBg,
         [possibleSizes[size]]: size,
