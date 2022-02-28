@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import clsx from "clsx";
@@ -27,9 +27,12 @@ export default function LinkButton<T extends "a" | "button" = "button">({
   children,
 }: ILinkButton<T>) {
   const router = useRouter();
-  const isActive = router.pathname.split("/").reverse()[0] === href;
+  const [isActive, setIsActive] = useState<boolean>(false);
   const Component = tag === "a" ? Link : "button";
 
+  useEffect(() => {
+    setIsActive(router.asPath === href);
+  }, [router.isReady, router.asPath, href]);
   return (
     <Component href={href || ""}>
       <div
@@ -39,7 +42,13 @@ export default function LinkButton<T extends "a" | "button" = "button">({
           "bg-gray-500 bg-opacity-40": isActive,
         })}
       >
-        <span className="flex gap-12 text-white font-medium">
+        <span
+          className={clsx({
+            "flex gap-12 font-medium": true,
+            "text-gray-300": !isActive,
+            "text-white": isActive,
+          })}
+        >
           {icon?.position === "start" && (
             <div
               className={clsx({
