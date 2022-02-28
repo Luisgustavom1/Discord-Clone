@@ -8,7 +8,7 @@ interface ICardProps {
 
 export default function Card({ children, title, subtitle }: ICardProps) {
   return (
-    <div className="bg-gray-600 m-h-screen w-screen rounded-md xs:w-480 xs:m-h-408">
+    <div className="bg-gray-600 min-h-screen w-screen rounded-md xs:w-480 xs:min-h-min">
       <div className="px-16 pt-36 mt-116 pb-40 xs:p-32 xs:mt-0">
         <section className="text-center mb-20">
           <h1 className="text-white leading-7 mb-8 font-title font-semibold text-2xl">
