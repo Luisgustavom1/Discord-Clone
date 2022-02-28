@@ -1,11 +1,12 @@
+import SideBar from "src/components/UI/SideBar";
 import WrappedComponent from "src/HOC/WrappedComponentAuth";
 import Authenticated from "src/layouts/Authenticated";
 
 const Channels = () => {
   return (
-    <div>
-      <Authenticated />
-    </div>
+    <Authenticated>
+      <SideBar />
+    </Authenticated>
   );
 };
 

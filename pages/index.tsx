@@ -9,6 +9,8 @@ const Home: NextPage = () => (
       <meta name="description" content="Gen rated by create next app" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
+
+    <div>Home</div>
   </div>
 );
 
