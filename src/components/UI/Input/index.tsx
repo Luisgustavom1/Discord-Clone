@@ -1,5 +1,9 @@
 import clsx from "clsx";
+import { useRef } from "react";
+import { useFormContext } from "react-hook-form";
 import { IInputPropsBase } from "src/types";
+
+import styles from "./styles.module.css";
 
 interface IInputUIProps extends IInputPropsBase {
   error?: string;
@@ -11,8 +15,13 @@ export default function InputUI({
   id,
   type = "text",
   className = "",
+  Icon,
+  SecondIcon,
   ...rest
 }: IInputUIProps) {
+  const formRef = useRef<HTMLInputElement>(null);
+  const formValue = formRef.current?.value;
+  const { resetField } = useFormContext();
   return (
     <div className="flex flex-col">
       <span className="flex">
@@ -33,18 +42,45 @@ export default function InputUI({
           </p>
         )}
       </span>
-      <input
+      <div
         className={clsx({
-          "w-full text-white p-[10px] bg-black-900 bg-opacity-10 border border-black-900 border-opacity-30 rounded text-base h-40 focus:outline-none hover:border-opacity-85":
+          "flex items-center bg-black-900 bg-opacity-10 border border-black-900 border-opacity-30 rounded h-40 px-8":
             true,
-          "focus:border-blue": !error,
-          "border-opacity-100 border-red": !!error,
           [className]: !!className,
         })}
-        id={id}
-        type={type}
-        {...rest}
-      />
+      >
+        <input
+          ref={formRef}
+          className={clsx({
+            "w-full text-white bg-transparent text-base focus:outline-none hover:border-opacity-85":
+              true,
+            "focus:border-blue": !error,
+            "border-opacity-100 border-red": !!error,
+          })}
+          id={id}
+          type={type}
+          {...rest}
+        />
+        {Icon && !formValue && (
+          <button
+            type="submit"
+            className={`${styles["animation-icon-primary-show"]} text-gray-200`}
+          >
+            <Icon />
+          </button>
+        )}
+        {SecondIcon && !!formValue && (
+          <div
+            className={`${styles["animation-icon-secondary-show"]} text-gray-200 w-20 h-20`}
+            onClick={() => resetField(rest.name)}
+            onKeyUp={() => ({})}
+            role="button"
+            tabIndex={0}
+          >
+            <SecondIcon />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

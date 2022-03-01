@@ -3,9 +3,14 @@ import { Controller } from "react-hook-form";
 import InputUI from "src/components/UI/Input";
 import { IInputPropsBase } from "src/types";
 
+interface ruleContent {
+  value: number;
+  message: string;
+}
+
 interface IInputForm extends IInputPropsBase {
   isRequired?: boolean;
-  rules?: any;
+  rules?: Record<string, ruleContent>;
 }
 
 export function InputForm({

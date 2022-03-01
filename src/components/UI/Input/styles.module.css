@@ -1,0 +1,25 @@
+.animation-icon-secondary-show {
+  animation: icon-close-show 100ms ease-out forwards;
+}
+
+.animation-icon-primary-show {
+  animation: icon-search-show 100ms ease-out forwards;
+}
+
+@keyframes icon-search-show {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes icon-close-show {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
