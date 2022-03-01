@@ -7,7 +7,7 @@ import { FormValues } from "src/types";
 import Authentication from "src/layouts/Authentication";
 import FormContext from "src/components/ReactHookForm/FormContext";
 import Button from "src/components/UI/Button";
-import logoAndText from "public/assets/svg/logo-and-text.svg";
+import LogoAndText from "public/assets/svg/logo-and-text.svg";
 import Card from "src/components/UI/Card";
 import { InputForm } from "src/components/ReactHookForm/InputForm";
 import { LinkTypograph } from "src/components/UI/Typography";
@@ -28,11 +28,7 @@ const Login: NextPage = () => {
           subtitle="Estamos muito animados em te ver novamente!"
         >
           <div className="absolute top-0 right-1/2 translate-x-1/2 mx-auto mt-20 xs:hidden">
-            <Image
-              src={logoAndText}
-              alt="Logo e texto discord"
-              objectFit="contain"
-            />
+            <LogoAndText />
           </div>
           <FormContext onSubmit={submit}>
             <section className="flex flex-col gap-20">
