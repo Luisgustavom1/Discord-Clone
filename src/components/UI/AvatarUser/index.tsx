@@ -9,7 +9,7 @@ interface IAvatarUser {
 
 export default function AvatarUser({ userImg, userName }: IAvatarUser) {
   return (
-    <span className="relative">
+    <div className="relative w-32">
       <Image
         src={userImg}
         alt={`Imagem de usuário do ${userName}`}
@@ -20,6 +20,6 @@ export default function AvatarUser({ userImg, userName }: IAvatarUser) {
       <div className="flex items-center justify-center bg-black-600 absolute bottom-1 -right-4 w-16 h-16 rounded-full">
         <AbsentStatus className="absolute -top-[2px]" />
       </div>
-    </span>
+    </div>
   );
 }

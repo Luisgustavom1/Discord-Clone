@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import clsx from "clsx";
 import Link from "next/link";
-import AvatarUser from "src/components/UI/DMs/AvatarUser";
+import AvatarUser from "src/components/UI/AvatarUser";
 
 import styles from "./styles.module.css";
 
