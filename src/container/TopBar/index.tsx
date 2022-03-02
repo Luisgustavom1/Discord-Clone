@@ -5,13 +5,13 @@ import styles from "./styles.module.css";
 
 interface ItopBarProps {
   children: ReactNode;
-  optionBg?: 1 | 2;
+  optionBg?: "black" | "gray";
   size?: "sm" | "md" | "lg";
   className?: string;
 }
 
 export default function TopBar({
-  optionBg = 1,
+  optionBg = "black",
   size = "md",
   children,
   className,
@@ -23,18 +23,12 @@ export default function TopBar({
     lg: "flex-1",
   };
 
-  const possibleBackgrounds = {
-    1: "bg-black-600",
-    2: "bg-gray-600",
-  };
-
   return (
     <div
       {...rest}
       className={clsx({
-        [`${styles["topBar-container-box-shadow"]} z-10 relative flex items-center h-48 px-8`]:
+        [`${styles["topBar-container-box-shadow"]} bg-${optionBg}-600 z-10 relative flex items-center h-48 px-8`]:
           true,
-        [possibleBackgrounds[optionBg]]: optionBg,
         [possibleSizes[size]]: size,
         [className || ""]: className,
       })}
