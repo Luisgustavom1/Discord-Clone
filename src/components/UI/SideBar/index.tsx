@@ -12,7 +12,7 @@ export default function SideBar() {
           Encontre ou comece uma conversa
         </span>
       </TopBar>
-      <section className="overflow-scroll scroll-bar-0 h-[calc(100vh-48px)]">
+      <section className="overflow-scroll scroll-bar-0 main-content">
         <div className="flex flex-col p-8 gap-[2px]">
           <LinkButton
             icon={{
