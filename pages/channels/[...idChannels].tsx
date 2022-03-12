@@ -9,14 +9,14 @@ import Diviser from "src/components/UI/Diviser";
 import NavHeader from "src/components/UI/NavItemsHeader";
 import SideBar from "src/components/UI/SideBar";
 import TopBar from "src/container/TopBar";
-import WrappedComponent from "src/HOC/WrappedComponentAuth";
+import WrappedComponentAuth from "src/HOC/WrappedComponentAuth";
 import Authenticated from "src/layouts/Authenticated";
 import FormContext from "src/components/ReactHookForm/FormContext";
 import FriendOptions from "src/components/UI/FriendOptions";
 import { InputForm } from "src/components/ReactHookForm/InputForm";
 
 const Channels = () => {
-  const onSubmit = () => { };
+  const onSubmit = () => ({});
   return (
     <Authenticated>
       <SideBar />
@@ -60,64 +60,62 @@ const Channels = () => {
                 SecondIcon={IconClose}
               />
             </FormContext>
-            <div>
+            <div className="overflow-scroll scroll-bar-0 h-[calc(100%-64px)]">
               <h3 className="my-16 pl-32 pr-20 font-medium font-title tracking-wide text-gray-200 text-xs uppercase">
                 Online - 5
               </h3>
-              <div>
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-                <FriendOptions />
-              </div>
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
+              <FriendOptions />
             </div>
           </section>
           <article className="w-384 border-x border-opacity-10 border-gray-200" />
@@ -127,4 +125,4 @@ const Channels = () => {
   );
 };
 
-export default WrappedComponent(Channels);
+export default WrappedComponentAuth(Channels);

@@ -7,7 +7,7 @@ function areInBrowser() {
   return typeof window !== "undefined";
 }
 
-const WrappedComponent = <T extends React.FunctionComponent>(
+const WrappedComponentAuth = <T extends React.FunctionComponent>(
   Component: React.FunctionComponent
 ) => {
   const AuthComponent = ({ ...props }: React.ComponentProps<T>) => {
@@ -25,4 +25,4 @@ const WrappedComponent = <T extends React.FunctionComponent>(
   return AuthComponent;
 };
 
-export default WrappedComponent;
+export default WrappedComponentAuth;

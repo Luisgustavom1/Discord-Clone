@@ -15,11 +15,13 @@ export default function SideBar() {
       <section className="overflow-scroll scroll-bar-0 main-content">
         <div className="flex flex-col p-8 gap-[2px]">
           <LinkButton
-            icon={{
-              position: "start",
-              iconElement: IconFriend,
-              size: "24px",
-            }}
+            icon={[
+              {
+                position: "start",
+                iconElement: <IconFriend />,
+                size: "24",
+              },
+            ]}
             notifications={4}
             tag="a"
             href="/channels/@me"
@@ -27,11 +29,13 @@ export default function SideBar() {
             Amigos
           </LinkButton>
           <LinkButton
-            icon={{
-              position: "start",
-              iconElement: IconNitro,
-              size: "24px",
-            }}
+            icon={[
+              {
+                position: "start",
+                iconElement: <IconNitro />,
+                size: "24",
+              },
+            ]}
             tag="a"
             href="/store"
           >
@@ -40,7 +44,7 @@ export default function SideBar() {
         </div>
         <span className="flex items-center justify-between px-16 pt-8 cursor-pointer text-gray-300 mb-8 hover:text-gray-100">
           <p className="font-title text-xs uppercase">Mensagens Diretas</p>
-          <i className="fa-solid fa-plus text-sm text-gray-100 mr-[2px]" />
+          <i className="fa-solid fa-plus text-sm text-gray-100 mr-[6px]" />
         </span>
         <DMs />
       </section>
