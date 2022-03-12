@@ -20,7 +20,6 @@ export default function DM({ userDm: { id, name, user, imgUrl } }: IDMProps) {
       href={`/channels/@me/${id}`}
       tag="a"
       className={styles["dm-container"]}
-      onClick={(e) => console.log("s", e)}
       icon={[
         {
           iconElement: (

@@ -14,7 +14,7 @@ const CircleIcon = ({ children }: { children: ReactNode }) => {
 
 export default function FriendOptions() {
   return (
-    <div className="border-t border-white border-opacity-5 h-60 w-508 ml-32 rounded flex items-center justify-between cursor-pointer hover:bg-gray-500 hover:bg-opacity-10 hover:w-[524px] hover:px-8 hover:ml-24">
+    <div className="border-t border-white border-opacity-5 h-60 w-508 ml-32 rounded flex items-center justify-between cursor-pointer hover:bg-gray-500 hover:bg-opacity-10 hover:w-[524px] hover:px-8 hover:ml-24 hover:border-0 hover:pt-1">
       <span className="flex items-center">
         <AvatarUser
           userImg="/../public/assets/img/testeCanal.png"

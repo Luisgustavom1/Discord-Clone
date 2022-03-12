@@ -37,7 +37,7 @@ export default function LinkButton<T extends "a" | "button" = "button">({
     setIsActive(router.asPath === href);
   }, [router.isReady, router.asPath, href]);
   return (
-    <Component {...rest} href={href || ""}>
+    <Component href={href || ""}>
       <div
         className={clsx({
           "flex items-center justify-between cursor-pointer select-none rounded h-44 px-12 hover:text-gray-100 hover:bg-gray-500 hover:bg-opacity-20":
