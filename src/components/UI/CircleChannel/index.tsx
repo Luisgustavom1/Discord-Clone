@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 
 import CircleNotifications from "src/components/UI/CircleNotifications";
 
@@ -24,7 +23,7 @@ export default function CircleChannel({
       <Link href={href} passHref>
         <div
           className={clsx({
-            "w-48 h-full mx-auto relative rounded-full flex items-center justify-center duration-100 ease-out before:block before:duration-75 before:ease-out before:delay-75 before:-left-12 before:top-1/2 before:-translate-y-1/2 before:absolute before:rounded-r-md before:bg-white hover:rounded-2xl":
+            "w-48 h-full mx-auto relative rounded-full flex items-center justify-center ease-out cursor-pointer before:block before:duration-75 before:ease-out before:delay-75 before:-left-12 before:top-1/2 before:-translate-y-1/2 before:absolute before:rounded-r-md before:bg-white hover:rounded-2xl":
               true,
             "before:h-8 before:w-4": notification,
             [`bg-[url('${imgUrl || "."}')] bg-contain`]: imgUrl,
