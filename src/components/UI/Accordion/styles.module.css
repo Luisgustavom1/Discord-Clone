@@ -1,0 +1,9 @@
+@keyframes arrow-rotate {
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+.arrow-animation {
+  animation: arrow-rotate .4s forwards ease-in;
+}

@@ -25,17 +25,19 @@ export default function InputUI({
   return (
     <div className="flex flex-col">
       <span className="flex">
-        <label
-          htmlFor={id}
-          className={clsx({
-            "font-semibold font-title text-xs text-gray-200 mb-8 uppercase":
-              true,
-            "text-red": !!error,
-          })}
-        >
-          {label}
-          {error && " -"}
-        </label>
+        {label && (
+          <label
+            htmlFor={id}
+            className={clsx({
+              "font-semibold font-title text-xs text-gray-200 mb-8 uppercase":
+                true,
+              "text-red": !!error,
+            })}
+          >
+            {label}
+            {error && " -"}
+          </label>
+        )}
         {!!error && (
           <p className="text-xs ml-[1px] text-red italic font-medium">
             {error}

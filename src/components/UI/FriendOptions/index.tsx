@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
-import IconOptions from "public/assets/svg/icon-options.svg";
-import IconChat from "public/assets/svg/icon-chat.svg";
+import IconOptions from "public/assets/svg/icons/icon-options.svg";
+import IconChat from "public/assets/svg/icons/icon-chat.svg";
 import AvatarUser from "../AvatarUser";
 
 interface IFriendOptionsProps {

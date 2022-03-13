@@ -27,7 +27,7 @@ export default function TopBar({
     <div
       {...rest}
       className={clsx({
-        [`${styles["topBar-container-box-shadow"]} bg-${optionBg}-600 z-10 relative flex items-center h-48 px-8`]:
+        [`${styles["topBar-container-box-shadow"]} bg-${optionBg}-600 z-10 relative flex items-center h-48 px-8 py-12`]:
           true,
         [possibleSizes[size]]: size,
         [className || ""]: className,

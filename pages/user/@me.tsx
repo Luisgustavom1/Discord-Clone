@@ -1,14 +1,14 @@
-import IconFriends from "public/assets/svg/icon-friends.svg";
-import IconNewGroup from "public/assets/svg/icon-new-group.svg";
-import IconInbox from "public/assets/svg/icon-inbox.svg";
-import IconSupport from "public/assets/svg/icon-support.svg";
-import IconSearch from "public/assets/svg/icon-search.svg";
-import IconClose from "public/assets/svg/icon-close.svg";
-import IconNitro from "public/assets/svg/icon-nitro.svg";
+import IconFriends from "public/assets/svg/icons/icon-friends.svg";
+import IconNewGroup from "public/assets/svg/icons/icon-new-group.svg";
+import IconInbox from "public/assets/svg/icons/icon-inbox.svg";
+import IconSupport from "public/assets/svg/icons/icon-support.svg";
+import IconSearch from "public/assets/svg/icons/icon-search.svg";
+import IconClose from "public/assets/svg/icons/icon-close.svg";
+import IconNitro from "public/assets/svg/icons/icon-nitro.svg";
 
 import Diviser from "src/components/UI/Diviser";
 import NavHeader from "src/components/UI/NavItemsHeader";
-import SideBar from "src/components/UI/SideBar";
+import SideBar from "src/container/SideBar";
 import TopBar from "src/container/TopBar";
 import WrappedComponentAuth from "src/HOC/WrappedComponentAuth";
 import Authenticated from "src/layouts/Authenticated";
@@ -18,13 +18,14 @@ import mockupData from "src/mockupData";
 import LinkButton from "src/components/UI/LinkButton";
 import DMs from "src/components/UI/DMs";
 import { InputForm } from "src/components/ReactHookForm/InputForm";
+import MainContent from "src/container/MainContent";
 
 const Me = () => {
   const onSubmit = () => ({});
   return (
     <Authenticated>
       <SideBar>
-        <span className="bg-black-800 cursor-pointer text-gray-400 font-medium flex items-center rounded h-28 text-sm px-8 py-1">
+        <span className="bg-black-800 text-gray-400 font-medium cursor-pointer w-full flex items-center justify-center rounded h-28 text-sm py-1">
           Encontre ou comece uma conversa
         </span>
         <>
@@ -65,7 +66,7 @@ const Me = () => {
         </>
       </SideBar>
       <div className="w-full">
-        <TopBar optionBg="gray" size="lg" className="px-16 py-12">
+        <TopBar optionBg="gray" size="lg">
           <span className="flex items-center px-8 gap-8 text-gray-400">
             <IconFriends />
             <p className="font-title text-base text-white">Amigos</p>
@@ -87,13 +88,13 @@ const Me = () => {
           </nav>
           <span className="flex gap-16 pr-8 h-full text-gray-200">
             <IconNewGroup />
-            <Diviser direction="vertical" className="" />
+            <Diviser direction="vertical" />
             <IconInbox />
             <IconSupport />
           </span>
         </TopBar>
-        <div className="flex bg-gray-600 h-auto main-content">
-          <section className="flex-1 pt-16">
+        <MainContent>
+          <section className="flex-1">
             <FormContext onSubmit={onSubmit} className="pl-32 pr-20">
               <InputForm
                 label=""
@@ -114,7 +115,7 @@ const Me = () => {
             </div>
           </section>
           <article className="w-384 border-x border-opacity-10 border-gray-200" />
-        </div>
+        </MainContent>
       </div>
     </Authenticated>
   );
