@@ -26,7 +26,6 @@ export default function LinkButton<T extends "a" | "button" = "button">({
   href,
   children,
   className,
-  ...rest
 }: ILinkButton<T>) {
   const router = useRouter();
   const [isActive, setIsActive] = useState<boolean>(false);

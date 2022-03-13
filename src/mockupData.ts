@@ -262,6 +262,79 @@ const mockupData = {
       online: true,
     },
   ],
+  friends: [
+    {
+      id: 1,
+      name: "Nome teste 1",
+      status: "Disponível",
+    },
+    {
+      id: 2,
+      name: "Nome teste 2",
+      status: "Disponível",
+    },
+    {
+      id: 3,
+      name: "Nome teste 3",
+      status: "Disponível",
+    },
+    {
+      id: 4,
+      name: "Nome teste 4",
+      status: "Disponível",
+    },
+    {
+      id: 5,
+      name: "Nome teste 5",
+      status: "Disponível",
+    },
+    {
+      id: 6,
+      name: "Nome teste 6",
+      status: "Disponível",
+    },
+    {
+      id: 7,
+      name: "Nome teste 7",
+      status: "Disponível",
+    },
+    {
+      id: 8,
+      name: "Nome teste 8",
+      status: "Disponível",
+    },
+    {
+      id: 9,
+      name: "Nome teste 9",
+      status: "Disponível",
+    },
+    {
+      id: 10,
+      name: "Nome teste 10",
+      status: "Disponível",
+    },
+
+    {
+      id: 11,
+      name: "Nome teste 11",
+      status: "Disponível",
+    },
+    {
+      id: 12,
+      name: "Nome teste 12",
+      status: "Disponível",
+    },
+    {
+      id: 13,
+      name: "Nome teste 13",
+      status: "Disponível",
+    },
+    {
+      id: 14,
+      name: "Nome teste 14",
+      status: "Disponível",
+    },
+  ],
 };
 
 export default mockupData;

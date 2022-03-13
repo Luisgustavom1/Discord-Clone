@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import { useRef } from "react";
 import { useFormContext } from "react-hook-form";
+
 import { IInputPropsBase } from "src/types";
 
 import styles from "./styles.module.css";
@@ -19,9 +19,9 @@ export default function InputUI({
   SecondIcon,
   ...rest
 }: IInputUIProps) {
-  const formRef = useRef<HTMLInputElement>(null);
-  const formValue = formRef.current?.value;
-  const { resetField } = useFormContext();
+  const { resetField, getValues } = useFormContext();
+  const inputValue = getValues(rest.name);
+
   return (
     <div className="flex flex-col">
       <span className="flex">
@@ -50,7 +50,6 @@ export default function InputUI({
         })}
       >
         <input
-          ref={formRef}
           className={clsx({
             "w-full text-white bg-transparent text-base focus:outline-none hover:border-opacity-85":
               true,
@@ -61,7 +60,7 @@ export default function InputUI({
           type={type}
           {...rest}
         />
-        {Icon && !formValue && (
+        {Icon && !inputValue && (
           <button
             type="submit"
             className={`${styles["animation-icon-primary-show"]} text-gray-200`}
@@ -69,7 +68,7 @@ export default function InputUI({
             <Icon />
           </button>
         )}
-        {SecondIcon && !!formValue && (
+        {SecondIcon && !!inputValue && (
           <div
             className={`${styles["animation-icon-secondary-show"]} text-gray-200 w-20 h-20`}
             onClick={() => resetField(rest.name)}
