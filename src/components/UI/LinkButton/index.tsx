@@ -28,13 +28,11 @@ export default function LinkButton<T extends "a" | "button" = "button">({
   className,
 }: ILinkButton<T>) {
   const router = useRouter();
-  const [isActive, setIsActive] = useState<boolean>(false);
+  const isActive = router.asPath === href;
   const Component = tag === "a" ? Link : "button";
   const iconStart = icon?.filter(({ position }) => position === "start")[0];
   const iconEnd = icon?.filter(({ position }) => position === "end")[0];
-  useEffect(() => {
-    setIsActive(router.asPath === href);
-  }, [router.isReady, router.asPath, href]);
+
   return (
     <Component href={href || ""}>
       <div

@@ -18,7 +18,10 @@ import { InputForm } from "src/components/ReactHookForm/InputForm";
 const Channels = () => {
   return (
     <Authenticated>
-      <SideBar />
+      <SideBar>
+        <div>1</div>
+        <div>2</div>
+      </SideBar>
       <div className="w-full">
         <TopBar optionBg="gray" size="lg" className="px-16 py-12">
           <span className="flex gap-16 pr-8 h-full text-gray-200">

@@ -12,9 +12,14 @@ export default function Authenticated({ children }: IAuthenticatedProps) {
   return (
     <div className="flex">
       <ChannelsList>
-        <CircleChannel imgUrl="" notification={4} active />
+        <CircleChannel imgUrl="" notification={4} href="/user/@me" />
         {mockupData.channels.map(({ id, imgUrl, notification }) => (
-          <CircleChannel key={id} imgUrl={imgUrl} notification={notification} />
+          <CircleChannel
+            key={id}
+            href={`/channels/${id}`}
+            imgUrl={imgUrl}
+            notification={notification}
+          />
         ))}
       </ChannelsList>
       <main className="flex flex-1">{children}</main>

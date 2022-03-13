@@ -39,7 +39,7 @@ const Me = () => {
               ]}
               notifications={4}
               tag="a"
-              href="/channels/@me"
+              href="/user/@me"
             >
               Amigos
             </LinkButton>
